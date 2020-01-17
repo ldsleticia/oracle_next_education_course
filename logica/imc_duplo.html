@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+	<script>
+
+        function pula_linha(){
+            document.write("<br>");
+        }
+
+        function escreve_frase(frase){
+            document.write(frase);
+            pula_linha();
+        }  
+
+        function calcula_imc(altura, peso){
+            var imc = peso / (altura * altura);
+            return imc;
+           
+        }
+
+       var imc_flavio = calcula_imc(1.71, 73);
+       var imc_amigo = calcula_imc(1.72, 68);
+
+       escreve_frase(imc_flavio);
+       escreve_frase(imc_amigo);
+
+
+	</script>
