@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pula_linha(){
+		document.write("<br>");
+	}
+	
+	function escreve_frase(frase){
+		document.write(frase);
+		pula_linha();
+        pula_linha();
+	}
+
+
+    var vitorias = parseInt(prompt("digite a quantidade de vitorias do seu time"));
+    
+    var empates = parseInt(prompt("digite a quantidade de empates"));
+    
+    var pontos = vitorias * 3 + empates;
+
+    escreve_frase("seu time acumulou " + pontos + " pontos até agora");
+
+    if (pontos > 28){
+    escreve_frase("seu time está melhor que o ano passado");
+    }
+
+    if (pontos < 28){
+    escreve_frase("seu time está pior que o ano passado");
+    }
+
+    if (pontos == 28){
+    escreve_frase("seu time está igual ao ano passado");
+    }
+	</script>
