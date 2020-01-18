@@ -8,7 +8,7 @@
         document.write("<br>");
 }
 
-    function mostra(frase) {
+    function escreve_frase(frase) {
 
         document.write(frase);
         pulaLinha();
@@ -23,7 +23,20 @@ var nome = prompt ("Informe seu nome");
 var altura_informada = prompt(nome + "Informe sua altura");
 var peso_informado = prompt(nome + "Informe seu peso");
 
-var imc = calculaImc(altura_informada, peso_informado)
+var imc = calculaImc(altura_informada, peso_informado);
 
 document.write(nome + " seu IMC calculado é " + imc);
+
+if(imc < 18.5){
+    escreve_frase(" seu IMC está abaixo do recomendado")
+}
+
+if(imc >= 18.5 &&  imc <= 35){
+    escreve_frase(" seu IMC está dentro do recomendado")
+}
+
+if(imc > 35){
+    escreve_frase(" seu IMC está acima do recomendado")
+}
+
 </script>
