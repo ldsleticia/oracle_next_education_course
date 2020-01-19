@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function escreve_frase(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+var numero_pensado = Math.round(Math.random() * 10);
+var chute = parseInt(prompt("digite seu chute"));
+
+if(chute == numero_pensado){
+    escreve_frase("você acertou");
+}
+
+else{
+    escreve_frase("você errou, o número pensado foi " + numero_pensado);
+}
+
+</script>
