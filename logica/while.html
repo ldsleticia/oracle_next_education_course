@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+    function pula_linha(){
+        document.write("<br>");
+    }
+
+    function escreve_frase(frase){
+        document.write(frase);
+        pula_linha();
+    }
+
+    var contador = 0;
+
+    while(contador <= 100){
+        escreve_frase("Número " + contador);
+        contador = contador + 2;
+    }
+
+    escreve_frase("Chegamos ao final");
+
+</script>
