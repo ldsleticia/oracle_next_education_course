@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pula_linha(){
+        document.write("<br>");
+    }
+
+    function escreve_frase(frase){
+        document.write(frase);
+        pula_linha();
+       
+    }
+
+    var contador = 30;
+
+    while(contador <= 40){
+        
+        if(contador == 33){
+            contador = contador + 1;
+        }
+
+        if(contador == 37){
+            contador = contador +1;
+        }
+
+        else{
+            escreve_frase("O número é " + contador);
+            contador = contador + 1;
+        }
+    }
+
+    escreve_frase("FIM");
+
+
+
+    </script>
