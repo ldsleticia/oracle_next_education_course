@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+    
+    function pula_linha(){
+        document.write("<br>");
+    }
+
+    function escreve_frase(frase){
+        document.write(frase);
+        pula_linha();
+    }
+
+    var ano_copa = 1930;
+    var limite = parseInt(prompt("Qual a data máxima para consultar?"));
+
+    while(ano_copa <= limite){
+        escreve_frase("Teve copa em " + ano_copa);
+        ano_copa = ano_copa + 4;
+    }
+
+    escreve_frase("Tivemos copa todos esses anos até agora")
+
+
+
+
+
+
+</script>
