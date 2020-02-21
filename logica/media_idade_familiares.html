@@ -12,15 +12,20 @@
 
     let total_familiares = parseInt(prompt("Quantidade de pessoas na sua família"));
 
-    let quantidade = total_familiares
+    let numero = 1; //variavel de contador para o sistema entender quando parar de entrar no while
 
-    while(quantidade <= total_familiares){
+    let total_idades = 0; //tem que começar fora do while porque se não cada while o contador zera ao invés de guardar a idade.
+
+    while(numero <= total_familiares){
         let idade_do_familiar = parseInt(prompt("Digite a idade que você deseja"));
-        quantidade++;
+        numero++; //contador para não ficar em loop infinito.
+        total_idades = total_idades + idade_do_familiar; //tem que somar todas as idades antes de fazer a média e é isso que ele faz
     }
 
+    let media_idades = total_idades / total_familiares; //conta a média de idades dos familiares com base no número de familiares que foi incluído no começo do programa
 
-    escreve_frase(media);
+
+    escreve_frase(media_idades);
 
 
 
