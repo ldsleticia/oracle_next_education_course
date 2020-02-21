@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script>
+    function pula_linha(){
+        document.write("<br>");
+    }
+
+    function escreve_frase(frase){
+        document.write(frase);
+        pula_linha();
+    }
+
+    let total_de_eventos = parseInt(prompt("Quantos eventos você fez no mês?"));
+    let contador = 1;
+    let total_gasto_com_evento = 0;
+
+    while(contador <= total_de_eventos){
+        let gasto = parseFloat(prompt("Informe o total de gasto com o evento"));
+        total_gasto_com_evento = total_gasto_com_evento + gasto;
+        contador++;
+
+    }
+
+    let media = total_gasto_com_evento / total_de_eventos;
+
+    escreve_frase("A média de gastos com eventos é " + media);
+
+
+</script>
