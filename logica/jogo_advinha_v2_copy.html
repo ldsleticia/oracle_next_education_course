@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+    function pula_linha(){
+        document.write("<br>");
+    }
+
+    function escreve_frase(frase){
+        document.write(frase);
+    }
+
+    function sorteia(n){
+        let sorte = Math.round(Math.random() * 10);
+        return sorte;
+    }
+
+    let numero_pensado = sorteia();
+
+    let tentativa = 1;
+
+    while(tentativa <= 3){
+        let chute = parseInt(prompt("Digite eu chute"));
+        
+        if(chute == numero_pensado){
+            escreve_frase("Você acertou");
+        }
+
+        else{
+            escreve_frase("Você errou o número pensado foi " + numero_pensado);
+            }
+            contador++;
+    }
+    </script>
