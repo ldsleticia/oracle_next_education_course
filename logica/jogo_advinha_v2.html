@@ -10,19 +10,24 @@
     }
 
     function sorteia(n){
-        var sorte = Math.round(Math.random() * 10);
+        let sorte = Math.round(Math.random() * 10);
         return sorte;
     }
 
-    var chute = parseInt(prompt("Digite sue chute"));
-    var numero_pensado = sorteia();
+    let numero_pensado = sorteia();
 
-    if(chute == numero_pensado){
-        escreve_frase("Você acertou");
+    let tentativa = 1;
+
+    while(tentativa <= 3){
+        let chute = parseInt(prompt("Digite eu chute"));
+        
+        if(chute == numero_pensado){
+            escreve_frase("Você acertou");
+        }
+
+        else{
+            escreve_frase("Você errou o número pensado foi " + numero_pensado);
+            }
+            contador++;
     }
-
-    else{
-        escreve_frase("Você errou o número pensado foi " + numero_pensado);
-    }
-
-</script>
+    </script>
