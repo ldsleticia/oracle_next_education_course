@@ -1,33 +1,46 @@
 <meta charset="UTF-8">
-
 <script>
     function pula_linha(){
-        document.write("<br>");
+        document.write("<br>")
+        document.write("<br>")
     }
 
     function escreve_frase(frase){
         document.write(frase);
+        pula_linha();
     }
 
-    function sorteia(n){
+    function sorteia_numero(n){
         let sorte = Math.round(Math.random() * 10);
-        return sorte;
+        return sorte
     }
 
-    let numero_pensado = sorteia();
-
+    let numero_pensado = sorteia_numero();
     let tentativa = 1;
 
     while(tentativa <= 3){
-        let chute = parseInt(prompt("Digite eu chute"));
-        
+        let chute = parseInt(prompt("Digite seu chute")); //tem que ficar aqui dentro porque se não a pergunta não repete
         if(chute == numero_pensado){
             escreve_frase("Você acertou");
-        }
-
-        else{
-            escreve_frase("Você errou o número pensado foi " + numero_pensado);
+            break; //caso você acerte ele para o while ainda que tenham tentativas a serem feitas
+        } 
+            else{
+                escreve_frase("Você errou");
             }
-            contador++;
+            tentativa++;
     }
-    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
