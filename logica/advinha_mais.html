@@ -8,11 +8,20 @@ let segredo = 5;
 
 let input = document.querySelector("input");
 
-if(input.value == segredo){
+function verifica(){
+
+    if(input.value == segredo){
     alert("Você acertou");
-}
-    else{
-        alert("Você errou");
     }
+    
+        else{
+        alert("Você errou");
+        }
+
+}
+
+let button = document.querySelector("button");
+
+button.onclick = verifica;
 
 </script>
