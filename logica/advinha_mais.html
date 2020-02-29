@@ -4,21 +4,26 @@
 
 
 <script>
-let segredo = Math.round(Math.random() * 10);
+let segredos = [5, 7, 10, 2];
 
 let input = document.querySelector("input");
 input.focus();
 
 function verifica(){
 
-    if(input.value == segredo){
-    alert("Você acertou");
+    var achou = false;
+    
+    for (var posicao = 0; posicao < segredos.length; posicao++){
+        if(input.value == segredos[posicao]){
+            alert("Você acertou");
+                break;
+                    achou = true;
     }
     
-        else{
-        alert("Você errou");
-        }
-
+}
+    if(achou = false){
+        alert("Você errou")
+    }
         input.value = "";
         input.focus();
 
